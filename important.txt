@@ -1,0 +1,1 @@
+ nginx file path --- sudo nano /etc/nginx/sites-available/imailer-admin-backend

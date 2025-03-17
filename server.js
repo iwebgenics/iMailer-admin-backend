@@ -34,7 +34,7 @@ app.use('/api/employees', employeeRoutes);
 app.use("/api/stats", statsRoutes);
 app.use('/api/passkeys', passkeyRoutes);
 
-const PORT = process.env.PORT || 5000;
-app.listen(5002, "0.0.0.0", () => {
-  console.log("Server running on port 5002");
+const PORT = process.env.PORT || 5006;
+app.listen(5006, "0.0.0.0", () => {
+  console.log("Server running on port 5006");
 });
