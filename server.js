@@ -11,7 +11,9 @@ const passkeyRoutes = require('./routes/passkeys');
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: 'https://admin.imailer.in'
+}));
 
 // Connect to MongoDB
 mongoose
