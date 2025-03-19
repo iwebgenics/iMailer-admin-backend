@@ -39,8 +39,8 @@ app.use('/api/imailer/admin', adminRoutes);
 app.use('/api/imailer/employees', employeeRoutes);
 app.use('/api/imailer/stats', statsRoutes);
 app.use('/api/imailer/passkeys', passkeyRoutes);
-const PORT = process.env.PORT || 5006;
+const PORT = process.env.PORT || 5009;
 
-app.listen(5006, "0.0.0.0", () => {
-  console.log("Server running on port 5006");
+app.listen(5009, "0.0.0.0", () => {
+  console.log("Server running on port 5009");
 });
