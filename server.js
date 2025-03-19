@@ -12,7 +12,9 @@ const passkeyRoutes = require('./routes/passkeys');
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin: [ 'https://admin.imailer.in/']
+  origin: [ 'https://admin.imailer.in/'],
+  credentials: true, // Allows cookies/tokens
+
 }));
 
 
