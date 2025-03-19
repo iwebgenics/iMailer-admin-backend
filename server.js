@@ -12,7 +12,7 @@ const passkeyRoutes = require('./routes/passkeys');
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin: ['https://admin.imailer.in', 'http://localhost:3000']
+  origin: [ 'http://localhost:3000']
 }));
 
 
@@ -31,12 +31,12 @@ app.get("/", (req, res) => {
 });
 
 // Mount API routes
-app.use('/api', authRoutes);
-app.use('/api/admin', adminRoutes);
-app.use('/api/employees', employeeRoutes);
-app.use("/api/stats", statsRoutes);
-app.use('/api/passkeys', passkeyRoutes);
-
+// After: (For imailer backend running on port 5006)
+app.use('/api/imailer', authRoutes);
+app.use('/api/imailer/admin', adminRoutes);
+app.use('/api/imailer/employees', employeeRoutes);
+app.use('/api/imailer/stats', statsRoutes);
+app.use('/api/imailer/passkeys', passkeyRoutes);
 const PORT = process.env.PORT || 5006;
 app.listen(5006, "0.0.0.0", () => {
   console.log("Server running on port 5006");
